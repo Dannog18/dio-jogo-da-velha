@@ -95,11 +95,11 @@ function checaVencedor() {
         mudarVencedor(quadrado3);
         var vencedor = true;
 
-    } else if('-' == null && vencedor == false) {
-       var empatou = document.getElementById("Empatou")
-        var Empate = empatou
-        Empate.innerHTML = "Empatou";
-    }
+    } if (quadrado1.innerHTML !== '-' && quadrado2.innerHTML !== '-' && quadrado3.innerHTML !== '-' && quadrado4.innerHTML !== '-' && quadrado5.innerHTML !== '-' && quadrado6.innerHTML !== '-' && quadrado7.innerHTML !== '-' && quadrado8.innerHTML !== '-' && quadrado9.innerHTML !== '-' && vencedor !== true ) {
+			var empatou = document.getElementById("Empatou")
+   var Empate = empatou
+   Empate.innerHTML = "Empatou";
+}
     return vencedor;
 }
 
@@ -128,6 +128,9 @@ function checaSequencia(quadrado1, quadrado2, quadrado3) {
 function reiniciar() {
     vencedor = null;
     vencedorSelecionado.innerHTML = '';
+	var empatou = document.getElementById("Empatou");
+    var Empate = empatou
+    Empate.innerHTML = ""; 
 
     for(var i = 1; i<= 9; i++) {
         var quadrado = document.getElementById(i);
@@ -138,3 +141,4 @@ function reiniciar() {
     }
     mudarJogador(valor = 'X');
 }
+	
